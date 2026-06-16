@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# env files (Keeps your database credentials & API keys safe)
+.env
+.env.*
+!.env.example
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
