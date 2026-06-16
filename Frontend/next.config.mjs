@@ -4,16 +4,13 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
-  allowedDevOrigins: [
-    process.env.FRONTEND_URL || 'http://localhost:3000',
-  ],
   async rewrites() {
     return [
       {
-        source: '/inquiry',
-        destination: process.env.BACKEND_URL || 'http://localhost:5000/inquiry',
+        source: '/:path*',
+        destination: `${process.env.BACKEND_URL || 'http://localhost:5000'}/:path*`,
       },
     ]
   },

@@ -67,7 +67,7 @@ export default function ContactSupportPage() {
             </p>
 
             <Button size="lg" className="w-full sm:w-auto rounded-full font-semibold">
-              <Link href="http://localhost:5000/venue">
+              <Link href={`${process.env.BACKEND_URL}/venue`}>
                 👉 Submit Venue Details & Partner With Us
               </Link>
             </Button>
